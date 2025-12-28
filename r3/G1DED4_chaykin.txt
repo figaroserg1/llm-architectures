@@ -1,6 +1,5 @@
 LLM: gpt-4.1-mini through Azure 
-Wiki to rules through Openrouter gpt-5.1-codex-max (i recomend to use 5.1 instead)
-
+Distillation of Wiki to rules through Openrouter gpt-5.1-codex-max (but i recomend to use 5.1 instead)
 
 note: Implemented within 5 hours. Not all features which i implemented in my Store agent were merged to the erc3 Prod agent (due to a bad timing), see not merged but promising features on the bottom. 
 
@@ -71,10 +70,11 @@ Features implemented in my Store Agent, but had no time to merge to the Prod age
 
 Experimenting with prolog rules generation, looks very promising.
 
-
+My TG: @figaroserg1
 Source code will be posted to https://t.me/Gpt4Agents
 My blog "AI driven apps for business" https://aidrivenapps.blogspot.com
 Over winter holiday there will be posed a lot of useful content.
+
 
 
 
