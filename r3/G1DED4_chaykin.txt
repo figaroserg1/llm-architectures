@@ -70,11 +70,5 @@ Features implemented in my Store Agent, but had no time to merge to the Prod age
 
 Experimenting with prolog rules generation, looks very promising.
 
-My TG: @figaroserg1
-Source code will be posted to https://t.me/Gpt4Agents
-My blog "AI driven apps for business" https://aidrivenapps.blogspot.com
-Over winter holiday there will be posed a lot of useful content.
-
-
-
-
+My TG: @figaroserg1  (@AIDrivenDev)
+Source code will be posted to my "AI driven apps for business" Blogs: https://t.me/AIDrivenDev and  https://aidrivenapps.blogspot.com
