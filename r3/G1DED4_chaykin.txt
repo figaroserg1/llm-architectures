@@ -4,7 +4,7 @@ Distillation of Wiki to rules through Openrouter gpt-5.1-codex-max (but i recome
 note: Implemented within 5 hours. Not all features which i implemented in my Store agent were merged to the erc3 Prod agent (due to a bad timing), see not merged but promising features on the bottom. 
 
 Architecture  "SGR-guidance":
-0. mini model. pgt-4.1-mini
+0. mini model: gpt-4.1-mini. Wanted to see what i can get out of it.
 1. Modified SGR NextStep architecture. included extra fields (see bellow) to bring rules and roles to LLM's focus of attention
 2. SGR guidance on all levels: distill, preflight, nextstep.
 3. Context compaction logic (was disabled during prod run, due to lack of testing)
@@ -15,7 +15,7 @@ Architecture  "SGR-guidance":
 Issues:
 - problem on existing tool had to reimplement it as AddTimeLogEntryForUser
 - Openrouter was giving errors on json deserialization, switching to azure helped.
-
+- gpt-5 on azure was duplicating json, breaking SO. (Rinat's suggested fix kind of helped) But had to abandone using of gpt-5 to avoid suprises.
 
 Supporting infrastructure: 
 1. Per session Structured logging of each operation. <session> is folder, <task>_<score>.json for tasks
@@ -36,7 +36,7 @@ class RoleOperation(BaseModel):
     allowed_operations: List[str]
     dissallowed_operations: List[str]
 
-2. SGR preflight, extracts summary what is needed for solving task and all roles.
+2. SGR preflight, extracts summary what is needed for solving task, all roles and expicit rules following:
 
 class TaskProfile(BaseModel):
     goal_description: str
@@ -74,4 +74,5 @@ Experimenting with generation or rules in Prolog language, looks very promising.
 
 My TG: @figaroserg1  (@AIDrivenDev)
 Source code will be posted to my "AI driven apps for business" Blogs: https://t.me/AIDrivenDev and  https://aidrivenapps.blogspot.com
+
 
